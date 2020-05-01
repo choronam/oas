@@ -47,7 +47,8 @@
     "swagger-parser": "^3.4.1",
     "swagger2-to-postman": "^1.1.0",
     "uslug": "^1.0.4",
-    "yamljs": "^0.2.8"
+    "yamljs": "^0.2.8",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -62,7 +63,10 @@
   },
   "scripts": {
     "test": "mocha",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "license": "see LICENSE file"
+  "license": "see LICENSE file",
+  "snyk": true
 }
